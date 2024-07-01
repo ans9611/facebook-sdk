@@ -25,6 +25,6 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    install_requires=['requests'],
+    install_requires=['requests', "security==1.3.0"],
     tests_require=["coverage"],
 )
