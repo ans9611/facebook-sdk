@@ -33,7 +33,7 @@ while True:
         # Facebook.
         [some_action(post=post) for post in posts["data"]]
         # Attempt to make a request to the next page of data, if it exists.
-        posts = requests.get(posts["paging"]["next"]).json()
+        posts = requests.get(posts["paging"]["next"], timeout=60).json()
     except KeyError:
         # When there are no more pages (['paging']['next']), break from the
         # loop and end the script.
